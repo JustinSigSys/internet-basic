@@ -3,29 +3,115 @@
 	"name": "Internet Basic",
 	"patterns": [
 		{
-			"include": "#keywords"
+			"include": "#comments"
+		},
+		{
+			"include": "#entity"
 		},
 		{
 			"include": "#strings"
+		},
+		{
+			"include": "#variable"
+		},
+		{
+			"include": "#storage"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#keywords"
 		}
+		
 	],
 	"repository": {
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.ibs",
-				"match": "\\b(if|while|for|return)\\b"
+				"match": "(?i)\\b(And|Break|Case|Call|Continue|Do|Else|Endif|End|Endselect|Enter|Eq|Eventsub|Eventwait|Exit|Exitall|For|Ge|Go|Gosub|Goto|Gt|If|Le|Loop|Lt|Messagesub|Ne|Next|Noexcp|On|Pop|Popall|Procreturn|Return|Run|Select|Step|Then|To|Until|While)\\b"
+			},{
+				"name": "keyword.operator.ibs",
+				"match": "(?i)(\\b(mod|pow|and|or|not|xor|Abs|Acos|Acosh|Adjustl|Adjustr|And|Asc|Aschex|Asin|Asinh|Atan|Base256|Base64|Binary|Cbrt|Chksum|Ceil|Chr|Cos|Cosh|Date2Num|Datetonum|Dechex|Decrypt|Dstat|Decihex|Encrypt|Excp|Exp|Factorial|First|Floor|Fpt|Fstat|Gcd|Hexasc|Hexdec|Hexidec|Ihexdec|Int|Intel|Inteld|Key|Last|Lcase|Lcm|Len|Log10|Mid|Move|Mod|Pow|Not|Num|Num2Date|Numtodate|Or|Pad|Password|Path|Pcomm|Pos|Prev|Pstat|Recnum|Rnd|Rpos|Rsub|Setbit|Sgn|Sin|Sinh|Sqrt|Str|Strip|Stripl|Stripr|Sts|Sub|Swap|Tan|Tanh|Testbit|Ucase|Xor)\\b)|([+]|[-]|[*]|[/]|[=])"
+			},{
+				"name": "keyword.other.ibs",
+				"match": "(?i)\\b(Access|Autoinput|Close|Create|Createkey|Delete|Dir|Dosfc|Dosms|Dosrw|Erase|Excpsub|Extract|Extractimage|File|Image|Input|Inputfile|Inquire|Inquireimage|Insert|Insertimage|Lock|Log|Msgbox|Open|Position|Print|Printfile|Rewrite|Rewriteimage|Read|Readimage|Rename|Searchfile|Unlock|Update|Updateimage|Wait|Write|Writeimage|Activate|Again|Clear|Clearcommon|Clearformat|Clearlocal|Control|End|Enduse|Error|Errorto|Errorsub|Escape|Escapeto|Escapesub|Getformat|Getglobal|Include|Interrupt|Kill|Let|Pause|Secure|Setglobal|Stop|Terminate|Unset|Use|Wakeup)\\b"
 			}]
 		},
 		"strings": {
-			"name": "string.quoted.double.ibs",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
+			"patterns": [ 
 				{
-					"name": "constant.character.escape.ibs",
-					"match": "\\\\."
+					"name": "string.quoted.double.ibs",
+					"begin": "\"",
+					"end": "\"",
+					"patterns": [
+						{
+							"name": "constant.character.escape.ibs",
+							"begin": "@",
+							"end": "@"
+						}
+					]
+				},
+				{
+					"name": "string.quoted.single.ibs",
+					"begin": "'",
+					"end": "'",
+					"patterns": [
+						{
+							"name": "constant.character.escape.ibs",
+							"begin": "@",
+							"end": "@"
+						}
+					]
 				}
 			]
+		},
+		"comments": {
+			"patterns": [{
+				"name": "comment.line.ibs",
+				"begin": "!",
+				"end": "\n"
+			}]
+		},
+		"constants": {
+			"patterns": [
+				{
+				"name": "constant.character.ibs",
+				"match": "#|,|;|_"
+				},
+				{
+				"name": "constant.language.ibs",
+				"match": "(?i)(\\b(true|false|Allowmaximize|Autometafile|Autotaboff|Autotabon|Beginmetafile|Beginwaitcursor|Bf|Biosmouseon|Blink|Bm|Bright|Capsoff|Capson|Casessions|Cf|Cfld|Ch|Changecolor|Changecolors|Checkboxoff|Checkboxon|Closeicon|Copyfile|Cpl132|Cpl132|Cpl64|Cpl80|Cr|Createwindow|Createwindowex|Crmode|Cs|De|Deletewindow|Deletewindowex|Drawbitmap|Drawbox|Drawimage|Drawtext|Easyscan|Easyscanevent|Ellipse|En|Endmetafile|Endwaitcursor|Enhancedcharactersoff|Enhancedcharacterson|Enhancedmouseon|Et|Executemetafile|Faxconfigfile|Faxcoverpage|Faxcovertext|Faxdelete|Faxdeletejob|Faxdeleteonsend|Faxfineresolution|Faxfrom|Faxgetjobstatus|Faxlogofile|Faxnocoverpage|Faxnodelete|Faxnopageheaders|Faxnormalresolution|Faxpageheaders|Faxpcxfile|Faxphone|Faxsenddate|Faxsendtime|Faxsubmitjob|Faxtextfile|Faxtextmode|Faxto|Faxwriteconfig|Ff|Forceclose|Forcelogout|Ft|Fullscancodespassed|Getbkcolor|Getbkmode|Getconnectioninfo|Getextractinfo|Getfontinfo|Getfuncresult|Getpageinfo|Getrop2|GetDirAlias|Getservertime|Gettextalign|Gettextcolor|Gettextextent|Hidecursor|Hidemousecursor|Hyperlink|Ignorewindows|Init|Initinputdata|Insertoff|Inserton|Invokehelp|Killsession|Launch|Ld|Lf|Li|Linespacing|Lineto|Ls|Mapmode|Mc|Mouseoff|Mouseon|Mouseupoff|Mouseupon|Moveto|Newpage|Normalinput|Partialscancodesoff|Partialscancodeson|Playsound|Popfont|Pushfont|Radiobuttonoff|Radiobuttonon|Rb|Rc|Rd|Readmouse|Rectangle|Requestid|Resetscreen|Restorescreen|Restorewaitcursor|Rj|Roundrect|Ru|Savescreen|Sb|Scancodesoff|Screen|Selectfont|Selectpen|Selectsolidbrush|Selectsysfont|Selectwindowex|Setbkcolor|Setbkmode|Setgraphicsmode|Setorientation|Setpapersize|Setprinterinfo|Setrop2|Settextalign|SetDirAlias|Settextcolor|Sf|Shellexecute|Shelltodos|Showcursor|Showmousecursor|Shutdown|Singlekeytransmit|Sl|Spoolmessage|Ssb|Stdkeyboardoff|Stdkeyboardon|Switchsession|Textout|Time|Tm|Tp|Tr|Transparentcolor|Uppercaseinput|Verifyfile|Verifyfileex|Wallpaperbitmap|Wallpaperclear|Wallpapercolor|Wallpaperremove|Wc|Whohasfile|Windowtitlebackground|Windowtitleforeground)\\b)|[@]|[&]"
+				},
+				{
+				"name": "constant.numeric.ibs",
+				"match": "[0-9]"
+				}
+			]
+		},
+		"storage": {
+			"patterns": [{
+				"name": "storage.type.ibs",
+				"match": "(?i)\\b(Length|set|Subroutine|Numeric|String|local|common|Round)\\b"
+			},{
+				"name": "storage.modifier.ibs",
+				"match": "(?i)\\b(Format)\\b"
+			}]
+		},
+		"variable": {
+			"patterns": [{
+				"name": "variable.other.string.ibs",
+				"match": "[A-z0-9.]+\\$"
+			},{
+				"name": "variable.language.ibs",
+				"match": "(?i)\\b(Curpos|Date|Day|Enterlevel|Excp|Helpkey|Iterm|Longyear|Message|Partition|Priority|Runstate|Syspart|Term|Time|Version)\\b"
+			}]
+		},
+		"entity": {
+			"patterns": [{
+				"name": "entity.name.tag",
+				"match": "^\\s*[A-z0-9.]+\\:"
+			}]
 		}
 	},
 	"scopeName": "source.ibs"
