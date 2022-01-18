@@ -1,0 +1,25 @@
+{
+    "name": "internet-basic",
+    "displayName": "internet-basic",
+    "description": "Language extension for the Internet Basic language used by the Comet runtime.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.63.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "ibs",
+            "aliases": ["Internet Basic", "ibs"],
+            "extensions": ["ibs","inc"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "ibs",
+            "scopeName": "source.ibs",
+            "path": "./syntaxes/ibs.tmLanguage.json"
+        }]
+    }
+}
