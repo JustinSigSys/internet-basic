@@ -1,6 +1,13 @@
 # internet-basic README
 
-This is a language extension for the Internet Basic language, used by the Comet runtime.
+This is a Visual Studio Code language extension for Internet Basic language, used by the Comet runtime.
+
+To install this extension, download the VSIX file of the latest release.  Then inside Visual Studio Code:
+* Go to the extension browser
+* Click on the elipses "..." in the top right corner of the view ("Views and More Actions...")
+* Click "Install from VSIX..."
+* Select the downloaded VSIX file
+* Restart Visual Studio Code
 
 ## Features
 
@@ -26,7 +33,7 @@ Initial release.  This release should provide syntax highlighting for all comet 
 Below is a sample tasks.json file that should allow you to register and compile internet basic files, as well as set up your console.exe to point to the proper comet executables.
 
 In order to open the tasks.json file:
-* Hold CTRL-SHIFT-P
+* Press ```CTRL-SHIFT-P``` to bring up the Command Palette
 * Click "Tasks: Open User Tasks"
 * tasks.json should now be open - add the following code
 * Save tasks.json

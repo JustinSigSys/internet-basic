@@ -2,6 +2,15 @@
     "name": "internet-basic",
     "displayName": "Internet Basic",
     "description": "Language extension for the Internet Basic language, used by the Comet runtime.",
+    "publisher": "signature-systems",
+    "author": {
+        "name": "Justin Guerber"
+    },
+    "homepage": "https://github.com/JustinSigSys/internet-basic",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/JustinSigSys/internet-basic.git"
+    },
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.63.0"
