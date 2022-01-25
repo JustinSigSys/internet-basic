@@ -2,8 +2,6 @@
 
 All notable changes to the "internet-basic" extension will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+## [Release 1]
 
-## [Unreleased]
-
-- Initial release
+Initial release, added main language structure to ibs.tmLanguage.json.
