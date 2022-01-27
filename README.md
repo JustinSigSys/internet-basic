@@ -7,7 +7,7 @@ To use this extension:
 * Download the internet-basic [VSIX extension file](https://github.com/JustinSigSys/internet-basic/releases/download/v0.0.1/internet-basic-0.0.1.vsix)
 
 Once you have Viusual Studio Code installed:
-* Go to the extension browser (Click "Extensions" on the left-side menu or press ```CTRL-SHIFT-X```
+* Go to the extension browser (Click "Extensions" on the left-side menu or press ```CTRL-SHIFT-X```)
 * Click on the elipses "..." in the top right corner of the extensions window ("Views and More Actions...")
 * Click "Install from VSIX..."
 * Select the downloaded VSIX file
