@@ -20,7 +20,9 @@ Once you have Viusual Studio Code installed:
 ## Requirements
 
 **Visual Studio Code is required in order to use this extension**
+
 Comet by Signature Systems is required to compile and run Internet Basic programs.
+
 Console.exe is required to compile Internet Basic programs.
 
 ## Known Issues
