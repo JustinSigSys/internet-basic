@@ -1,8 +1,12 @@
 # internet-basic README
 
-This is a Visual Studio Code language extension for Internet Basic language, used by the Comet runtime.
+This is a Visual Studio Code language extension for Internet Basic language, used by the Comet runtime.  You must have Visual Studio Code installed in order to use this extension.
 
-To install this extension, download the VSIX file of the latest release.  Then inside Visual Studio Code:
+To use this extension:
+* First, download [Visual Studio Code](https://code.visualstudio.com/)
+* Download the internet-basic [extension file](https://github.com/JustinSigSys/internet-basic/releases/download/v0.0.1/internet-basic-0.0.1.vsix)
+
+Once you have Viusual Studio Code installed:
 * Go to the extension browser
 * Click on the elipses "..." in the top right corner of the view ("Views and More Actions...")
 * Click "Install from VSIX..."
@@ -15,6 +19,7 @@ To install this extension, download the VSIX file of the latest release.  Then i
 
 ## Requirements
 
+**Visual Studio Code is required in order to use this extension**
 Comet by Signature Systems is required to compile and run Internet Basic programs.
 Console.exe is required to compile Internet Basic programs.
 
