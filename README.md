@@ -3,8 +3,8 @@
 This is a Visual Studio Code language extension for Internet Basic language, used by the Comet runtime.  You must have Visual Studio Code installed in order to use this extension.
 
 To use this extension:
-* First, download [Visual Studio Code](https://code.visualstudio.com/)
-* Download the internet-basic [extension file](https://github.com/JustinSigSys/internet-basic/releases/download/v0.0.1/internet-basic-0.0.1.vsix)
+* First, download and install [Visual Studio Code](https://code.visualstudio.com/)
+* Download the internet-basic [VSIX extension file](https://github.com/JustinSigSys/internet-basic/releases/download/v0.0.1/internet-basic-0.0.1.vsix)
 
 Once you have Viusual Studio Code installed:
 * Go to the extension browser
