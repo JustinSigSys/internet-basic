@@ -1,6 +1,6 @@
-# internet-basic README
+# Internet Basic Extension for Visual Studio Code
 
-This is a Visual Studio Code language extension for Internet Basic language, used by the Comet runtime.  You must have Visual Studio Code installed in order to use this extension.
+This extension provides basic syntax highlighting in the Visual Studio Code editor.  Using the sample tasks.json file below you can also use Visual Studio Code to compile Internet Basic programs.  [Visual Studio Code](https://code.visualstudio.com/) is a free code editor provided by Microsoft.
 
 To use this extension:
 * First, download and install [Visual Studio Code](https://code.visualstudio.com/)
@@ -15,7 +15,7 @@ Once you have Viusual Studio Code installed:
 
 ## Features
 
- This is a bare bones attempt to get syntax highlighting to work properly for .ibs and .inc files.
+This is a bare bones attempt to get syntax highlighting to work properly for .ibs and .inc files.
 
 ## Requirements
 
@@ -23,7 +23,7 @@ Once you have Viusual Studio Code installed:
 
 Comet by Signature Systems is required to compile and run Internet Basic programs.
 
-Console.exe is required to compile Internet Basic programs.
+Console.exe is required to compile Internet Basic programs, and is provided by the Comet workstation installation.
 
 ## Known Issues
 
