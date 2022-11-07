@@ -68,8 +68,10 @@ That's it!  You should be all set to compile IB programs using Visual Studio Cod
 
 ```
 {
-    // Remember to replace the path to console.exe with your specific path - usually in the comet installation folder.
+    // Remember to replace the path to console.exe with your specific path.
+    // (usually in the comet installation folder)
     // For example, "c:\\comet\\console.exe"
+    // Remember to use double backslashes "\\" inside of strings
     //
     // See https://go.microsoft.com/fwlink/?LinkId=733558
     // for the documentation about the tasks.json format
