@@ -39,20 +39,38 @@ Initial release.  This release should provide syntax highlighting for all comet 
 
 Below is a sample tasks.json file that should allow you to register and compile internet basic files, as well as set up your console.exe to point to the proper comet executables.
 
+In order to get your tasks file set up, we will need to make use of the [Command Palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette), which allows us to access VS Code's functionality through typing and selecting the commands we are interested in.  To use the Command Palette, start by pressing ```CTRL-SHIFT-P```, which will bring up a box with a cursor inside, and a drop-down list of options.  As you type, VS Code will display any commands that match.  For instance, after typing "build" in the Command Palette, the drop-down list will contain options for "Tasks: Run Build Task" as well as "Tasks: Configure Default Build Task" (which we will use below).
+
+Note: When you first open the Command Palette with ```CTRL-SHIFT-P```, the text field already contains a right bracket ">" which specifies that VS Code is searching for matching commands.  If you start typing any of the commands below and file names start showing up instead, or you do not see the proper commands in the drop-down list, make sure you haven't accidentally removed the ">" from the beginning of the text field.
+
+So let's get started by setting up your tasks.json file.
+
 In order to open the tasks.json file:
 * Press ```CTRL-SHIFT-P``` to bring up the Command Palette
-* Click "Tasks: Open User Tasks"
-* tasks.json should now be open - add the following code
+* Type/select "Tasks: Open User Tasks"
+* tasks.json should now be open - add the code at the bottom of this section
 * Save tasks.json
 
-You can now run the tasks by pressing ```CTRL-SHIFT-P``` then selecting "Run task" and selecting the appropriate task.
+Verify the tasks were set up:
+* Press ```CTRL-SHIFT-P``` to bring up the Command Palette
+* Type/select "Tasks: Run Task"
+* You should see and be able to select the following tasks:
+    - IB Compile - compiles the current open Internet Basic file
+    - IB Register File - registers the current file in Comet
+    - IB Comet Setup - specify the path and arguments used to launch Comet (if it is not already open when running tasks)
 
-You can also specify your default build task to be the "IB Compile" task, which will allow you to press ```CTRL-SHIFT-B``` to automaticaly compile the current file.
+Next, if you want to set up the shortcut ```CTRL-SHIFT-B``` to compile the current open file:
+* Press ```CTRL-SHIFT-P``` to bring up the Command Palette
+* Type/select "Tasks: Configure Default Build Task"
+* Select "IB Compile" from the subsequent drop-down list
 
-Remember to replace the path to console.exe with your specific path - usually in the comet installation folder.
+That's it!  You should be all set to compile IB programs using Visual Studio Code.
 
 ```
 {
+    // Remember to replace the path to console.exe with your specific path - usually in the comet installation folder.
+    // For example, "c:\\comet\\console.exe"
+    //
     // See https://go.microsoft.com/fwlink/?LinkId=733558
     // for the documentation about the tasks.json format
     "version": "2.0.0",
