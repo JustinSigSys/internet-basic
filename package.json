@@ -11,7 +11,7 @@
         "type": "git",
         "url": "https://github.com/JustinSigSys/internet-basic.git"
     },
-    "version": "0.0.1",
+    "version": "0.3.0",
     "engines": {
         "vscode": "^1.63.0"
     },
@@ -19,16 +19,26 @@
         "Programming Languages"
     ],
     "contributes": {
-        "languages": [{
-            "id": "ibs",
-            "aliases": ["Internet Basic", "ibs"],
-            "extensions": ["ibs","inc"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "ibs",
-            "scopeName": "source.ibs",
-            "path": "./syntaxes/ibs.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "ibs",
+                "aliases": [
+                    "Internet Basic",
+                    "ibs"
+                ],
+                "extensions": [
+                    "ibs",
+                    "inc"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "ibs",
+                "scopeName": "source.ibs",
+                "path": "./syntaxes/ibs.tmLanguage.json"
+            }
+        ]
     }
 }
