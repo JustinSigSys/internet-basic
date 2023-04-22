@@ -32,7 +32,7 @@
 				"match": "(?i)\\b(And|Break|Case|Call|Continue|Do|Else|Endif|End|Endselect|Enter|Eq|Eventsub|Eventwait|Exit|Exitall|For|Ge|Go|Gosub|Goto|Gt|If|Le|Loop|Lt|Messagesub|Ne|Next|Noexcp|On|Pop|Popall|Procreturn|Return|Run|Select|Step|Then|To|Until|While)\\b"
 			},{
 				"name": "keyword.operator.ibs",
-				"match": "(?i)(\\b(mod|pow|and|or|not|xor|Abs|Acos|Acosh|Adjustl|Adjustr|And|Asc|Aschex|Asin|Asinh|Atan|Base256|Base64|Binary|Cbrt|Chksum|Ceil|Chr|Cos|Cosh|Date2Num|Datetonum|Dechex|Decrypt|Dstat|Decihex|Encrypt|Excp|Exp|Factorial|First|Floor|Fpt|Fstat|Gcd|Hexasc|Hexdec|Hexidec|Ihexdec|Int|Intel|Inteld|Key|Last|Lcase|Lcm|Len|Log10|Mid|Move|Mod|Pow|Not|Num|Num2Date|Numtodate|Or|Pad|Password|Path|Pcomm|Pos|Prev|Pstat|Recnum|Rnd|Rpos|Rsub|Setbit|Sgn|Sin|Sinh|Sqrt|Str|Strip|Stripl|Stripr|Sts|Sub|Swap|Tan|Tanh|Testbit|Ucase|Xor)\\b)|([+]|[-]|[*]|[/]|[=])"
+				"match": "(?i)(\\b(mod|pow|and|or|not|xor|Abs|Acos|Acosh|Adjustl|Adjustr|And|Asc|Aschex|Asin|Asinh|Atan|Base256|Base64|Binary|Cbrt|Chksum|Ceil|Chr|Cos|Cosh|Date2Num|Datetonum|Dechex|Decrypt|Dstat|Decihex|Encrypt|excp|Exp|Factorial|First|Floor|Fpt|Fstat|Gcd|Hexasc|Hexdec|Hexidec|Ihexdec|Int|Intel|Inteld|Key|Last|Lcase|Lcm|Len|Log10|Mid|Move|Mod|Pow|Not|Num|Num2Date|Numtodate|Or|Pad|Password|Path|Pcomm|Pos|Prev|Pstat|Recnum|Rnd|Rpos|Rsub|Setbit|Sgn|Sin|Sinh|Sqrt|Str|Strip|Stripl|Stripr|Sts|Sub|Swap|Tan|Tanh|Testbit|Ucase|Xor)\\b)|([+\\-*/=])"
 			},{
 				"name": "keyword.other.ibs",
 				"match": "(?i)\\b(Access|Autoinput|Close|Create|Createkey|Delete|Dir|Dosfc|Dosms|Dosrw|Erase|Excpsub|Extract|Extractimage|File|Image|Input|Inputfile|Inquire|Inquireimage|Insert|Insertimage|Lock|Log|Msgbox|Open|Position|Print|Printfile|Rewrite|Rewriteimage|Read|Readimage|Rename|Searchfile|Unlock|Update|Updateimage|Wait|Write|Writeimage|Activate|Again|Clear|Clearcommon|Clearformat|Clearlocal|Control|End|Enduse|Error|Errorto|Errorsub|Escape|Escapeto|Escapesub|Getformat|Getglobal|Include|Interrupt|Kill|Let|Pause|Secure|Setglobal|Stop|Terminate|Unset|Use|Wakeup)\\b"
@@ -47,8 +47,7 @@
 					"patterns": [
 						{
 							"name": "constant.character.escape.ibs",
-							"begin": "@",
-							"end": "@"
+							"match": "@[@!\\\\_]|@[^@]+@"
 						}
 					]
 				},
@@ -59,8 +58,7 @@
 					"patterns": [
 						{
 							"name": "constant.character.escape.ibs",
-							"begin": "@",
-							"end": "@"
+							"match": "@[@!\\\\_]|@[^@]+@"
 						}
 					]
 				}
@@ -85,7 +83,7 @@
 				},
 				{
 				"name": "constant.numeric.ibs",
-				"match": "[0-9]"
+				"match": "-?\\d+(\\.\\d+)?"
 				}
 			]
 		},
@@ -102,7 +100,8 @@
 			"patterns": [{
 				"name": "variable.other.string.ibs",
 				"match": "[A-z0-9.]+\\$"
-			},{
+			},
+			{
 				"name": "variable.language.ibs",
 				"match": "(?i)\\b(Curpos|Date|Day|Enterlevel|Excp|Helpkey|Iterm|Longyear|Message|Partition|Priority|Runstate|Syspart|Term|Time|Version)\\b"
 			}]
