@@ -4,7 +4,7 @@ This extension provides basic syntax highlighting in the Visual Studio Code edit
 
 To use this extension:
 * First, download and install [Visual Studio Code](https://code.visualstudio.com/)
-* Download the internet-basic [VSIX extension file](https://github.com/JustinSigSys/internet-basic/releases/download/v0.0.1/internet-basic-0.0.1.vsix)
+* Download the internet-basic [VSIX extension file](https://github.com/JustinSigSys/internet-basic/releases)
 
 Once you have Viusual Studio Code installed:
 * Go to the extension browser (Click "Extensions" on the left-side menu or press ```CTRL-SHIFT-X```)
